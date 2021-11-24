@@ -1,0 +1,137 @@
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* dark theme config */
+  --white-default: #ffffff;
+  --black-default: #000000;
+  --primary-1: #212c2f;
+  --primary-2: #374143;
+  --primary-3: #5b626a;
+  --primary-4: #868c8d;
+  --secondary-1: #454b4c;
+  --secondary-2: #576062;
+  --secondary-3: #5e6465;
+  --secondary-4: #afb1b2;
+  --secondary-5: #dddfdf;
+  --submit-1: #0684ff;
+  --submit-2: #408be6;
+  --submit-3: #86b3ef;
+  --warning: #ff9e0b;
+  --danger: #ff453a;
+  --cancel: #ffd60a;
+
+  /* light theme config */
+
+  /* fonts */
+  /* font-size */
+  --fz-title-1: 24px;
+  --fz-title-2: 22px;
+  --fz-subtitle-1: 20px;
+  --fz-subtitle-2: 18px;
+  --fz-body-1: 16px;
+  --fz-body-2: 14px;
+  --fz-caption-1: 12px;
+
+}
+
+.fz-title-1 {
+  font-size: var(--fz-title-1)
+}
+
+.fz-title-2 {
+  font-size: var(--fz-title-2)
+}
+
+.fz-subtitle-1 {
+  font-size: var(--fz-subtitle-1)
+}
+
+.fz-subtitle-2 {
+  font-size: var(--fz-subtitle-2)
+}
+
+.fz-body-1 {
+  font-size: var(--fz-body-1)
+}
+
+.fz-bod-2 {
+  font-size: var(--fz-bod-2)
+}
+
+.fz-caption-1 {
+  font-size: var(--fz-caption-1)
+}
+
+input {
+  font-size: var(--fz-body-2);
+  padding: 0px;
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: var(--white-default);
+  width: 100%;
+  height: min-content;
+  display: block;
+}
+
+input:focus {
+  background: #1e1e1e;
+
+}
+
+input::selection {
+  background: #408be6ab;
+}
+
+.card {
+  background: var(--secondary-3);
+  padding: 6px;
+  border-radius: 10px;
+  color: var(--secondary-4);
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: "SF Pro Rounded",
+    system-ui,
+    san-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #212c2f;
+  color: var(--secondary-5);
+  overflow: hidden;
+}
+
+hr {
+  color: var(--primary-2);
+  margin-top: 12px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 6px;
+  color: var(--primary-4);
+}
+
+.list-item:focus-within {
+  background: var(--submit-2);
+  color: var(--submit-3);
+}
+
+h1 {
+  color: var(--primary-3);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+button {
+  background: none;
+  border: none;
+  font-weight: 600;
+}
