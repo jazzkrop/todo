@@ -14,6 +14,7 @@ body * {
   --secondary-1: #454b4c;
   --secondary-2: #576062;
   --secondary-3: #5e6465;
+  --sec: #5e6366;
   --secondary-4: #afb1b2;
   --secondary-5: #dddfdf;
   --submit-1: #0684ff;
@@ -118,7 +119,9 @@ hr {
   padding: 6px;
   color: var(--primary-4);
 }
-
+.list-item-current {
+  background: var(--secondary-3);
+}
 .list-item:focus-within {
   background: var(--submit-2);
   color: var(--submit-3);

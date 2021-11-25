@@ -1,15 +1,25 @@
+import { useRef } from 'react'
 import { useState } from 'react'
 import useStore from '../../../contexts/Store/hooks/useStore'
-import setCurrentList from '../../../contexts/Store/reducer/setCurrentList';
+import useOnComponentDidMount from '../../../hooks/useOnComponentDidMount'
 
 const ListSimpleView = ({ list }) => {
-  const { updateRecord, setCurrentList } = useStore()
+  const { updateRecord, setCurrentList, store } = useStore()
   const [listName, setListName] = useState(list.name)
+  const inputName = useRef(null)
+
+  useOnComponentDidMount(() => {
+    inputName.current.click()
+  })
   return (
     <div
-      className="list-item"
+      className={
+        store.currentList === list.id
+          ? 'list-item list-item-current'
+          : 'list-item'
+      }
       onClick={() => {
-        setCurrentList({id:list.id})
+        setCurrentList({ id: list.id })
       }}
     >
       <div className="" style={{ fontSize: '23px' }}>
@@ -19,6 +29,7 @@ const ListSimpleView = ({ list }) => {
         style={{ marginLeft: '4px', padding: '0' }}
         type="text"
         name="name"
+        ref={inputName}
         required
         onKeyDown={(event) => {
           if (event.key === 'Enter') {
